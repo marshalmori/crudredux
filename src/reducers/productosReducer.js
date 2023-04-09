@@ -11,7 +11,8 @@ const initialState = {
   loading: false,
 };
 
-export default function (state = initialState, action) {
+// Função estava anônima (chamei de reducer)
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case AGREGAR_PRODUCTO:
       return {

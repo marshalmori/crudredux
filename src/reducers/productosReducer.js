@@ -2,6 +2,7 @@ import {
   AGREGAR_PRODUCTO,
   AGREGAR_PRODUCTO_EXITO,
   AGREGAR_PRODUCTO_ERROR,
+  COMENZAR_DESCARGA_PRODUCTOS,
 } from "../types";
 
 // Cada reducer tiene su propio state
@@ -30,6 +31,11 @@ export default function reducer(state = initialState, action) {
         ...state,
         loading: false,
         error: action.payload,
+      };
+    case COMENZAR_DESCARGA_PRODUCTOS:
+      return {
+        ...state,
+        loading: action.payload,
       };
     default:
       return state;

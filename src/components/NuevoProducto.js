@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 // Actions de Redux
@@ -8,6 +9,8 @@ const NuevoProducto = () => {
   // state de componente
   const [nombre, guardarNombre] = useState("");
   const [precio, guardarPrecio] = useState(0);
+
+  const navigate = useNavigate();
 
   // utilizar useDispatch y te cre una función
   const dispatch = useDispatch();
@@ -36,6 +39,8 @@ const NuevoProducto = () => {
       nombre,
       precio,
     });
+
+    navigate("/");
   };
 
   return (

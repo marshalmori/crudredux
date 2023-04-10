@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { editarProductoAction } from "../actions/productoActions";
+import { useNavigate } from "react-router-dom";
 
 const EditarProducto = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   // nuevo state de producto
   const [producto, guardarProducto] = useState({ nombre: "", precio: "" });
 
@@ -21,12 +25,14 @@ const EditarProducto = () => {
     });
   };
 
-  const { id, nombre, precio } = producto;
+  const { nombre, precio } = producto;
 
   const submitEditarProducto = (e) => {
     e.preventDefault();
 
-    editarProductoAction();
+    dispatch(editarProductoAction(producto));
+
+    navigate("/");
   };
 
   return (
@@ -45,7 +51,7 @@ const EditarProducto = () => {
                   className="form-control"
                   placeholder="Nombre Producto"
                   name="nombre"
-                  value={nombre}
+                  defaultValue={nombre}
                   onChange={onChangeFormulario}
                 />
               </div>
@@ -57,17 +63,17 @@ const EditarProducto = () => {
                   className="form-control"
                   placeholder="Precio Producto"
                   name="precio"
-                  value={precio}
+                  defaultValue={precio}
                   onChange={onChangeFormulario}
                 />
               </div>
 
-              <buton
+              <button
                 type="submit"
                 className="btn btn-primary font-weight-bold text-uppercase d-block w-100"
               >
                 Guardar Cambios
-              </buton>
+              </button>
             </form>
           </div>
         </div>

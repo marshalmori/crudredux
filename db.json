@@ -3,7 +3,7 @@
     {
       "id": 2,
       "nombre": "Jugo de Naranja",
-      "precio": "1"
+      "precio": "999"
     },
     {
       "nombre": "Jugo de Naranja",
@@ -26,8 +26,8 @@
       "id": 6
     },
     {
-      "nombre": "Macarrão",
-      "precio": 300,
+      "nombre": "Macarrão2",
+      "precio": "900",
       "id": 12
     }
   ]

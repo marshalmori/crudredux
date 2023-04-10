@@ -58,10 +58,27 @@ const agregarProductoError = (estado) => ({
 export function obtenerProductosAction() {
   return async (dispatch) => {
     dispatch(descargarProductos());
+
+    try {
+      const respuesta = await clienteAxios.get("/productos");
+      dispatch(descargaProdutosExitosa(respuesta.data));
+    } catch (error) {
+      dispatch(descargaProductosError());
+    }
   };
 }
 
 const descargarProductos = () => ({
   type: COMENZAR_DESCARGA_PRODUCTOS,
+  payload: true,
+});
+
+const descargaProdutosExitosa = (produtos) => ({
+  type: DESCARGA_PRODUCTOS_EXITO,
+  payload: produtos,
+});
+
+const descargaProductosError = () => ({
+  type: DESCARGA_PRODUCTOS_ERROR,
   payload: true,
 });

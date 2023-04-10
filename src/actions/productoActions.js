@@ -55,7 +55,7 @@ const agregarProductoError = (estado) => ({
 });
 
 // Función que descarga los productos de la base de datos
-export function obtenerProductoAction() {
+export function obtenerProductosAction() {
   return async (dispatch) => {
     dispatch(descargarProductos());
   };

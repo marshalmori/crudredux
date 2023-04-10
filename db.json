@@ -1,11 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
-    },
-    {
       "id": 2,
       "nombre": "Jugo de Naranja",
       "precio": "1"
@@ -29,31 +24,6 @@
       "nombre": "Comida",
       "precio": 400,
       "id": 6
-    },
-    {
-      "nombre": "Tequila",
-      "precio": 100,
-      "id": 7
-    },
-    {
-      "nombre": "Tequila 2",
-      "precio": 200,
-      "id": 8
-    },
-    {
-      "nombre": "Tequila 3",
-      "precio": 200,
-      "id": 9
-    },
-    {
-      "nombre": "Tequila 4",
-      "precio": 200,
-      "id": 10
-    },
-    {
-      "nombre": "Tequila 5",
-      "precio": 300,
-      "id": 11
     },
     {
       "nombre": "Macarrão",

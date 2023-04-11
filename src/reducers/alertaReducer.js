@@ -12,6 +12,11 @@ export default function alertaReducer(state = initialState, action) {
         ...state,
         alerta: action.payload,
       };
+    case OCULTAR_ALERTA:
+      return {
+        ...state,
+        alerta: null,
+      };
 
     default:
       return state;

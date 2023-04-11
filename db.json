@@ -1,11 +1,6 @@
 {
   "productos": [
     {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "999"
-    },
-    {
       "nombre": "Jugo de Naranja",
       "precio": "300",
       "id": 3
@@ -29,6 +24,11 @@
       "nombre": "Macarrão2",
       "precio": "900",
       "id": 12
+    },
+    {
+      "nombre": "Comida",
+      "precio": 20000,
+      "id": 13
     }
   ]
 }
